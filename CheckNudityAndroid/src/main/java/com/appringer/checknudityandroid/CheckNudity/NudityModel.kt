@@ -8,7 +8,7 @@ import com.appringer.checknudityandroid.bean.Score
 
 object NudityModel : NudityModelProvider {
     override fun init(context: Context, numThreads: Int, isOpenGPU: Boolean) {
-        NudityModelImpl.init(context, numThreads)
+        NudityModelImpl.init(context, numThreads,isOpenGPU)
     }
 
     override fun checkNudity(bitmap: Bitmap, score: (Score) -> Unit) {
