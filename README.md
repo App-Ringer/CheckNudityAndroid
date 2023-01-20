@@ -1,6 +1,6 @@
 ## CheckNudityAndroid
 
-[![Release](https://jitpack.io/v/jitpack/android-example.svg)](https://jitpack.io/#App-Ringer/CheckNudityAndroid/0.0.1)
+[![Release](https://jitpack.io/v/App-Ringer/CheckNudityAndroid.svg)](https://jitpack.io/#App-Ringer/CheckNudityAndroid)
 
 ## Usage
 
