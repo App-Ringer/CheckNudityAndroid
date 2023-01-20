@@ -1,5 +1,7 @@
 ## CheckNudityAndroid
 
+[![Release](https://jitpack.io/v/jitpack/android-example.svg)](https://jitpack.io/#App-Ringer/CheckNudityAndroid/0.0.1)
+
 ## Usage
 
 This 'CheckNudity' returns you a float value from 0 to 1.
