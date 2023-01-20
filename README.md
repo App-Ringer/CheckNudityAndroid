@@ -1,6 +1,36 @@
-## CheckNudityAndroid
+# CheckNudityAndroid
 
-[![Release](https://jitpack.io/v/App-Ringer/CheckNudityAndroid.svg)](https://jitpack.io/#App-Ringer/CheckNudityAndroid)
+Tag: [![Release](https://jitpack.io/v/App-Ringer/CheckNudityAndroid.svg)](https://jitpack.io/#App-Ringer/CheckNudityAndroid)
+
+
+## Initialization
+
+Add it in your root build.gradle at the end of repositories:
+
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Add the dependency:
+```
+	dependencies {
+	        implementation 'com.github.App-Ringer:CheckNudityAndroid:Tag'
+	}
+```
+
+call bellow method in the onCreate function of Application class:
+
+```
+NudityModel.init(
+            context = this,
+            numThreads = 4,
+            isOpenGPU = true
+        )
+```
 
 ## Usage
 
@@ -11,19 +41,6 @@ Notation:
 ```
 SFW = Safe for work
 NSFW = Not Safe for work
-
-```
-
-Initialization:
-```
-call bellow method in the onCreate function of Application class
-
-NudityModel.init(
-            context = this,
-            numThreads = 4,
-            isOpenGPU = true
-        )
-
 ```
 
 Score:
@@ -33,31 +50,28 @@ sfwScore = Safe for work value
 loadTime = Time consumed to load the image
 scanTime = Time consumed to scan the image
 bitmap = Provided bitmap// (Note: this will be null in case of average score of a video)
-
 ```
 
 If you have single bitmap - Pass bitmap to below mentioned method:
 ```
    NudityModel.checkNudity(bitmap) {score->
-
+            ...
    }
 
 ```
 
-
 If you have bitmap array - Pass array to below mentioned method:
 ```
    NudityModel.checkNudity(bitmaps, SecurityLevelEnum.LOW) { scorePerFrame, averageScore->
-
+            ...
      }
 
 ```
 
-
 If you have video in your local - Pass Video Uri to below mentioned method:
 ```
   NudityModel.checkNudity(context, uri, SecurityLevelEnum.LOW) { scorePerFrame, averageScore->
-
+            ...
   }
 
 ```
